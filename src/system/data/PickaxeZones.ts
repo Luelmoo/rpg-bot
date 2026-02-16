@@ -1,7 +1,7 @@
 import { Zone } from "#interfaces/zone";
 
-export const PickaxeZones: Zone[] = [
-    {
+export const PickaxeZones: Record<string, Zone> = {
+    mine_t1: {
         name: "Cavernas Quebradas",
         id: "mine_t1",
         tier: 1,
@@ -21,7 +21,7 @@ export const PickaxeZones: Zone[] = [
             },
         ],
     },
-    {
+    mine_t2: {
         name: "Minas Resonantes",
         id: "mine_t2",
         tier: 2,
@@ -46,7 +46,7 @@ export const PickaxeZones: Zone[] = [
             },
         ],
     },
-    {
+    mine_t3: {
         name: "Grieta Magmática",
         id: "mine_t3",
         tier: 3,
@@ -71,4 +71,4 @@ export const PickaxeZones: Zone[] = [
             },
         ],
     },
-];
+};
