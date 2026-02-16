@@ -13,6 +13,8 @@ export default class TestCommand extends Command {
     async run(ctx: CommandContext) {
         const service = new Exploration();
 
+        ctx.write({ content: "a" });
+
         console.log(service.getResources("pickaxe", "mine_t1"));
     }
 }
