@@ -1,0 +1,46 @@
+{
+  "name": "explorer",
+  "version": "1.0.0",
+  "description": "Bot de discord interactivo, mini-juego de exploración.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "watch": "tsc --watch",
+    "lint": "eslint src/**/*.ts",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "discordbot",
+    "discord",
+    "typescript",
+    "node"
+  ],
+  "author": "Luelmo",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "drizzle-orm": "^0.45.1",
+    "pg": "^8.18.0",
+    "redis": "^5.10.0",
+    "seyfert": "^4.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^25.2.2",
+    "@types/pg": "^8.16.0",
+    "@typescript-eslint/eslint-plugin": "^8.55.0",
+    "@typescript-eslint/parser": "^8.55.0",
+    "drizzle-kit": "^0.31.9",
+    "eslint": "^10.0.0",
+    "prettier": "^3.8.1",
+    "ts-node-dev": "^2.0.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  },
+  "imports": {
+    "#interfaces/*": "./dist/system/interfaces/*",
+    "#items/*": "./dist/system/data/items/*"
+  }
+}
