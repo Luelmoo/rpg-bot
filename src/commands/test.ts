@@ -1,4 +1,5 @@
 import { Declare, Command, CommandContext } from "seyfert";
+import Exploration from "../system/services/Exploration";
 
 @Declare({
     name: "test",
@@ -10,8 +11,8 @@ import { Declare, Command, CommandContext } from "seyfert";
 })
 export default class TestCommand extends Command {
     async run(ctx: CommandContext) {
-        await ctx.write({
-            content: "Lol, comando funcionando",
-        });
+        const service = new Exploration();
+
+        console.log(service.getResources("pickaxe", "mine_t1"));
     }
 }

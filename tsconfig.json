@@ -10,7 +10,8 @@
         "moduleResolution": "node",
         "paths": {
             "#interfaces/*": ["./src/system/interfaces/*"],
-            "#items/*": ["./src/system/data/items/*"]
+            "#items/*": ["./src/system/data/items/*"],
+            "#zones/*": ["./src/system/data/zones/*"]
         },
 
         "declaration": true,

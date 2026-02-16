@@ -41,6 +41,7 @@
   },
   "imports": {
     "#interfaces/*": "./dist/system/interfaces/*",
-    "#items/*": "./dist/system/data/items/*"
+    "#items/*": "./dist/system/data/items/*",
+    "#zones/*": "./dist/system/data/zones/*"
   }
 }
