@@ -11,7 +11,8 @@
         "paths": {
             "#interfaces/*": ["./src/system/interfaces/*"],
             "#items/*": ["./src/system/data/items/*"],
-            "#zones/*": ["./src/system/data/zones/*"]
+            "#zones/*": ["./src/system/data/zones/*"],
+            "#db/*": ["./src/db/*"]
         },
 
         "declaration": true,

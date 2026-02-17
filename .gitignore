@@ -4,3 +4,4 @@ node_modules/
 dist/
 commands.json
 pnpm-lock.yaml
+drizzle

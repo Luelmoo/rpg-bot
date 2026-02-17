@@ -1,6 +1,6 @@
 import { Client, UsingClient } from "seyfert";
-import Redis from "./system/Redis";
-import { global } from "./system/middlewares/middlewares";
+import Redis from "./system/Redis.js";
+import { global } from "./system/middlewares/middlewares.js";
 import "dotenv/config";
 
 const globalMiddlewares: (keyof typeof global)[] = ["cooldown"];

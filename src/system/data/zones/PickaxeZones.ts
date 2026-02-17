@@ -1,4 +1,4 @@
-import { Zone } from "#interfaces/zone";
+import { Zone } from "#interfaces/zone.js";
 
 export const PickaxeZones: Record<string, Zone> = {
     mine_t1: {

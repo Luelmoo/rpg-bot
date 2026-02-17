@@ -21,6 +21,7 @@
   "author": "Luelmo",
   "license": "MIT",
   "dependencies": {
+    "cron": "^4.4.0",
     "dotenv": "^17.3.1",
     "drizzle-orm": "^0.45.1",
     "pg": "^8.18.0",
@@ -42,6 +43,7 @@
   "imports": {
     "#interfaces/*": "./dist/system/interfaces/*",
     "#items/*": "./dist/system/data/items/*",
-    "#zones/*": "./dist/system/data/zones/*"
+    "#zones/*": "./dist/system/data/zones/*",
+    "#db/*": "./dist/db/*"
   }
 }

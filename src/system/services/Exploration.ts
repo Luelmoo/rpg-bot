@@ -1,12 +1,29 @@
 // import { drizzle } from "drizzle-orm/node-postgres";
 import { PickaxeZones } from "#zones/PickaxeZones.js";
 type ToolType = "pickaxe";
+import { db } from "#db/index.js";
+import { explorationTable } from "#db/schema.js";
+import { eq, and, lte } from "drizzle-orm";
+
 export default class Exploration {
-    // private db = drizzle(process.env.POSTGRESQL_URL!);
+    public async checkExplorations() {
+        const exploration = await db
+            .update(explorationTable)
+            .set({ status: "ended" })
+            .where(
+                and(
+                    eq(explorationTable.status, "exploring"),
+                    lte(explorationTable.end_time, new Date()),
+                ),
+            )
+            .returning();
 
-    constructor() {}
+        return exploration;
 
-    public getResources(tool: ToolType, zoneId: string) {
+        this.getResources("pickaxe", "mine_t1");
+    }
+
+    private getResources(tool: ToolType, zoneId: string) {
         const zones = this.getZonesByTool(tool);
         const zone = zones[zoneId];
         const obtainedItems = [];
@@ -34,3 +51,5 @@ export default class Exploration {
         }
     }
 }
+
+export const explorationService = new Exploration();

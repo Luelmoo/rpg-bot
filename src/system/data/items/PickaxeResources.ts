@@ -1,7 +1,7 @@
-import { Resource } from "#interfaces/items";
+import { Resource } from "#interfaces/items.js";
 
-export const PickaxeResources: Resource[] = [
-    {
+export const PickaxeResources: Record<string, Resource> = {
+    MIN_001: {
         id: "MIN_001",
         name: "Fragmento Mineral",
         rarity: "common",
@@ -13,7 +13,7 @@ export const PickaxeResources: Resource[] = [
         },
         category: "resource",
     },
-    {
+    MIN_002: {
         id: "MIN_002",
         name: "Cristal Opaco",
         rarity: "rare",
@@ -25,7 +25,7 @@ export const PickaxeResources: Resource[] = [
         },
         category: "resource",
     },
-    {
+    MIN_003: {
         id: "MIN_003",
         name: "Núcleo Resonante",
         rarity: "rare",
@@ -37,7 +37,7 @@ export const PickaxeResources: Resource[] = [
         },
         category: "resource",
     },
-    {
+    MIN_004: {
         id: "MIN_004",
         name: "Cristal Puro",
         rarity: "common",
@@ -49,7 +49,7 @@ export const PickaxeResources: Resource[] = [
         },
         category: "resource",
     },
-    {
+    MIN_005: {
         id: "MIN_005",
         name: "Núcleo Abisal",
         rarity: "epic",
@@ -61,7 +61,7 @@ export const PickaxeResources: Resource[] = [
         },
         category: "resource",
     },
-    {
+    MIN_006: {
         id: "MIN_006",
         name: "Fragmento del Abismo",
         rarity: "legendary",
@@ -73,4 +73,4 @@ export const PickaxeResources: Resource[] = [
         },
         category: "resource",
     },
-];
+};
