@@ -4,6 +4,8 @@ import { MessageFlags } from "seyfert/lib/types";
 
 export const cooldownMiddleware = createMiddleware<void>(
     async ({ context, next }) => {
+        console.log("eee");
+
         if (context.isChat()) {
             const inCooldown = await context.client.redis.exists(
                 `cooldown:${context.fullCommandName}:${context.author.id}`,
@@ -16,7 +18,6 @@ export const cooldownMiddleware = createMiddleware<void>(
                     flags: MessageFlags.Ephemeral,
                 });
             } else {
-                next();
                 await context.client.redis.set(
                     `cooldown:${context.fullCommandName}:${context.author.id}`,
                     cooldown,
@@ -24,5 +25,7 @@ export const cooldownMiddleware = createMiddleware<void>(
                 );
             }
         }
+
+        return next();
     },
 );
